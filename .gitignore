@@ -1,4 +1,6 @@
-zomato.csv
-zomato.csv
-zomato.csv
-zomato.csv
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+desktop.ini
+*.pkl.pkl
+*.csv
