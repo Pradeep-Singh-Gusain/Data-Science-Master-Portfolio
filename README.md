@@ -66,7 +66,7 @@ Run the ML pipeline script:
 Python
 python 06_Capstone_Final_Project/02_Python_Machine_Learning/train_pipeline.py
 👨‍💻 Author
-Pradeep Singh Gusain
+Pradeep Singh
 
 Aspiring Data Analyst | SQL, Python, Power BI & Machine Learning
 
