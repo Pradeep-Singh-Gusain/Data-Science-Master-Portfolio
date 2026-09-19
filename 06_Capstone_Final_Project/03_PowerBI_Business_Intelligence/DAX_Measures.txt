@@ -1,0 +1,24 @@
+// ======================================
+// CORE BUSINESS DAX MEASURES FOR POWER BI
+// ======================================
+
+// 1. Total Venue Count
+Total Restaurants = COUNTROWS(zomato_bangalore_clean)
+
+// 2. Average Ticket Size for Two (INR)
+Average Cost for Two = AVERAGE(zomato_bangalore_clean[clean_cost])
+
+// 3. Total Customer Engagement (Review Votes)
+Total Review Votes = SUM(zomato_bangalore_clean[votes])
+
+// 4. Mean Quality Rating
+Mean Rating = AVERAGE(zomato_bangalore_clean[clean_rate])
+
+// 5. Online Delivery Penetration %
+Delivery Penetration % = DIVIDE(CALCULATE(COUNTROWS(zomato_bangalore_clean), zomato_bangalore_clean[online_order] = "Yes"), COUNTROWS(zomato_bangalore_clean), 0) * 100
+
+// 6. Table Reservation Availability %
+Reservation Adoption % = DIVIDE(CALCULATE(COUNTROWS(zomato_bangalore_clean), zomato_bangalore_clean[book_table] = "Yes"), COUNTROWS(zomato_bangalore_clean), 0) * 100
+
+// 7. High Traction Venues (>500 Votes)
+High Traction Venues = CALCULATE(COUNTROWS(zomato_bangalore_clean), zomato_bangalore_clean[votes] >= 500)
